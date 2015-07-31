@@ -17,16 +17,16 @@ class TestExpense < Test::Unit::TestCase
 		assert_equal("Shinjuku", dest.name)
 	end
 	# 料金オブジェクトの作成
-	def	test_fare
+	def test_fare
 		dept = DepartureStation.new("Shinagawa")
 		dest = DestinationStation.new("Shinjuku")
 		fare = Fare.new(200, dept, dest)
 		assert_equal(200, fare.fare)
 	end
 	# 料金表の検索
-	def	test_find_fare
+	def test_find_fare
 		dept = DepartureStation.new("Shinagawa")
-	 	dest = DestinationStation.new("Shinjuku")
+		dest = DestinationStation.new("Shinjuku")
 		fare = Fare.new(200,dept,dest)
 		fareTable = FareTable.new
 		fareTable.add(fare)
